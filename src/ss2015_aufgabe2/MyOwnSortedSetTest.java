@@ -16,15 +16,33 @@ public class MyOwnSortedSetTest {
 		
 		out("----------");
 		
-		out(s1.insert(2));
+		out(s1.insert(5));
+		out(s1.set[0]);
 		out(s1.set[1]);
 		out("Lenght:"+s1.set.length);
 		
 		out("----------");
 		
-		out(s1.insert(4));
+		out(s1.insert(1));
+		out(s1.set[0]);
+		out(s1.set[1]);
 		out(s1.set[2]);
 		out("Lenght:"+s1.set.length);
+		
+		out("----------");
+		
+		out(s1.insert(4));
+		out(s1.set[0]);
+		out(s1.set[1]);
+		out(s1.set[2]);
+		out(s1.set[3]);
+		out("Lenght:"+s1.set.length);
+		
+		out("----------");
+		
+		//out(s1.insert(4));
+		//out(s1.set[2]);
+		//out("Lenght:"+s1.set.length);
 	}
 
 }
