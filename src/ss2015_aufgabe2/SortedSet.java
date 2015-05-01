@@ -26,7 +26,7 @@ public class SortedSet implements MyComparable, MyPrintable {
 		if( set.length == 0 ){				    //if array is empty
 			set = new Integer[1];  				//create array with length 1
 			set[0] = num;						//fill in number at first array spot
-			out("Array was null, num inserted");				//message
+			out("Array was null, num inserted");//message
 			return true;
 		}
 		else {
@@ -42,7 +42,7 @@ public class SortedSet implements MyComparable, MyPrintable {
 				}
 			}
 			if(shouldAdd == true) {				//if shouldAdd is true add num and sort
-				out("added num at the end");    					 //message
+				out("added num at the end");    				 //message
 				Integer[] tempSet = new Integer[set.length + 1]; //new temprary array
 				for(int k = 0; k < tempSet.length -1; k++){      //fill temporary array with original array
 					tempSet[k] = set[k];
@@ -59,8 +59,30 @@ public class SortedSet implements MyComparable, MyPrintable {
 	}
 
 
-	public boolean remove(int i) {
-		// TODO
+	public boolean remove(int num) {
+		
+		if( set.length == 0 ){				    //if array is empty
+			out("array is empty");				//message
+			return false;
+		}
+		else {
+			for (int i = 0; i < set.length; i++) { //go through array 
+				 if (set[i] == num) {			   					 //if number at index equals num
+					 Integer[] tempSet = new Integer[set.length -1]; //create temp array
+					 for (int j = 0; j < i; j++) {					 //fill temp array with numbers before num
+						 tempSet[j] = set[j];
+					 }
+					 for (int k = i+1; k < set.length; k++) { 		 //fill temp with numbers after num
+						 tempSet[k-1] = set[k];
+					 }
+					 set = tempSet;                  				 //set set-array to temp-array
+					 out("number was deleted");
+					 return true;
+				 }
+			}
+			
+			
+		}
 		return false;
 	}
 	

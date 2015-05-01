@@ -87,7 +87,7 @@ public class SortedSetTest {
 	}
 */
 
-/*
+
 	@Test
 	public void testRemoveInteger() {
 		SortedSet s1 = new SortedSet();
@@ -100,6 +100,7 @@ public class SortedSetTest {
 		assertTrue("3 geloescht", s1.remove(3));
 		assertFalse("3 nicht in der Menge", s1.remove(new Integer(3)));
 		
+		/*
 		s2.insert(0);
 		s2.insert(1);
 		s2.insert(4);
@@ -109,8 +110,9 @@ public class SortedSetTest {
 		assertTrue("0 aus s1 geloescht", s1.remove(new Integer(0)));
 		assertTrue("0 aus s2 geloescht", s2.remove(new Integer("0")));
 		assertTrue("[1, 4, 8]", s1.equal(s2));
+		*/
 	}
-*/
+
 	
 /*
 	@Test
