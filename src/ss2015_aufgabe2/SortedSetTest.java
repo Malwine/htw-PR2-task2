@@ -30,17 +30,9 @@ public class SortedSetTest {
 	
 	@Test
 	public void testFirst() {
-		SortedSet s1 = new SortedSet();
-		s1.insert(3);
-		s1.insert(new Integer(8));
-		//System.out.println(s1.set[0]);
-		
-		for(int i = 0; i< s1.set.length; i++ ){
-			System.out.println(s1.set[i]);
-		}
-		
-		assertTrue("int 3 eingefuegt ", s1.insert(3));
-		assertTrue("Integer 8 eingefuegt ", s1.insert(new Integer(8)));
+		SortedSet s2 = new SortedSet();
+		assertTrue("int 3 eingefuegt ", s2.insert(3));
+		assertTrue("Integer 8 eingefuegt ", s2.insert(new Integer(8)));
 	}
 
 /*

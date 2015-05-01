@@ -30,6 +30,13 @@ public class MyOwnSortedSetTest {
 		out("Lenght:"+s1.set.length);
 		
 		out("----------");
+		out(s1.insert(1));
+		out(s1.set[0]);
+		out(s1.set[1]);
+		out(s1.set[2]);
+		out("Lenght:"+s1.set.length);
+		
+		out("----------");
 		
 		out(s1.insert(4));
 		out(s1.set[0]);
