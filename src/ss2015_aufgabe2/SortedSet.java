@@ -3,7 +3,7 @@ package ss2015_aufgabe2;
 import java.util.Arrays;
 
 /**
- * SortedSet is a class for a sorted set without any doubled integers.
+ * SortedSet is a class for a sorted array without any doubled integers.
  * @author Malwine
  *
  */
@@ -83,6 +83,7 @@ public class SortedSet implements MyComparable, MyPrintable {
 			
 			
 		}
+		out("num not in array");
 		return false;
 	}
 	

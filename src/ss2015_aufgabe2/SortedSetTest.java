@@ -31,7 +31,7 @@ public class SortedSetTest {
 	    System.setErr(null);
 	}
 	*/
-	
+
 	@Test
 	public void testFirst() {
 		SortedSet set2 = new SortedSet();
