@@ -10,7 +10,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class SortedSetTest {
-
+    
+	static void out(Object line) {
+	    System.out.println(line);
+	}
+	
 	/*
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
@@ -30,12 +34,23 @@ public class SortedSetTest {
 	
 	@Test
 	public void testFirst() {
-		SortedSet s2 = new SortedSet();
-		assertTrue("int 3 eingefuegt ", s2.insert(3));
-		assertTrue("Integer 8 eingefuegt ", s2.insert(new Integer(8)));
+		SortedSet set2 = new SortedSet();
+		assertTrue("int 3 eingefuegt ", set2.insert(3));
+		assertTrue("Integer 8 eingefuegt ", set2.insert(new Integer(8)));
+		assertTrue("Integer 4 eingefuegt ", set2.insert(new Integer("4")));
+		assertTrue("Integer 5 eingefuegt ", set2.insert(Integer.valueOf(5)));
+		out(set2.set[0]);
+		out(set2.set[1]);
+		out(set2.set[2]);
+		out(set2.set[3]);
+		assertFalse("int 5 eingefuegt ", set2.insert(5));
+		out(set2.set[0]);
+		out(set2.set[1]);
+		out(set2.set[2]);
+		out(set2.set[3]);
 	}
 
-/*
+
 	@Test
 	public void testInsertInteger() {
 		SortedSet s1 = new SortedSet();
@@ -45,7 +60,7 @@ public class SortedSetTest {
 		assertTrue("Integer 5 eingefuegt ", s1.insert(Integer.valueOf(5)));
 		assertFalse("int 5 eingefuegt ", s1.insert(5));
 	}
-*/
+
 	
 /*	
 	@Test

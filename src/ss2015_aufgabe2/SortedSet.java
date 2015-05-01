@@ -21,6 +21,8 @@ public class SortedSet implements MyComparable, MyPrintable {
 
 	public boolean insert(int num) {
 		
+		boolean shouldAdd = false;
+		
 		if( set.length == 0 ){				    //if array is empty
 			set = new Integer[1];  				//create array with length 1
 			set[0] = num;						//fill in number at first array spot
@@ -29,24 +31,30 @@ public class SortedSet implements MyComparable, MyPrintable {
 		}
 		else {
 			for(int i = 0; i< set.length; i++ ){ //if array is not empty - go through array
+				shouldAdd = false;
 				if(set[i] == num){				 //if number at index is equal to num - exit
 					out("number is double");     //message
 					return false;				 //return status false = contains num already
+					
 				}
-				else { 		 										 // if array has ints then
-					out("added num at the end");    					 //message
-					Integer[] tempSet = new Integer[set.length + 1]; //new temprary array
-					for(int k = 0; k < tempSet.length -1; k++){      //fill temporary array with original array
-						tempSet[k] = set[k];
-					}
-					tempSet[tempSet.length-1] = num;				 //fill num in last field of array
-					out("filled");									 //message
-					set = tempSet;									 //set set-array to temporary array
-					Arrays.sort(set);								 //sort the array
-					return true;									 //return status true = was inserted
+				else { 		 					// if array has ints then set shouldAdd to true
+					shouldAdd = true;			// set only boolean because otherwise loop ends here (hacky)
 				}
 			}
+			if(shouldAdd == true) {				//if shouldAdd is true add num and sort
+				out("added num at the end");    					 //message
+				Integer[] tempSet = new Integer[set.length + 1]; //new temprary array
+				for(int k = 0; k < tempSet.length -1; k++){      //fill temporary array with original array
+					tempSet[k] = set[k];
+				}
+				tempSet[tempSet.length-1] = num;				 //fill num in last field of array
+				set = tempSet;									 //set set-array to temporary array
+				Arrays.sort(set);								 //sort the array
+				out("sorted");									 //message
+				return true;									 //return status true = was inserted
+			}
 		}
+		
 		return false;
 	}
 
