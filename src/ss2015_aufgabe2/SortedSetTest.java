@@ -59,8 +59,6 @@ public class SortedSetTest {
 		assertFalse("int 5 eingefuegt ", s1.insert(5));
 	}
 
-	
-/*	
 	@Test
 	public void testEqual() {
 		SortedSet s1 = new SortedSet();
@@ -83,8 +81,6 @@ public class SortedSetTest {
 		s2.insert(8);	
 		assertTrue("s1 gleich s2", s1.equal(s2));
 	}
-*/
-
 
 	@Test
 	public void testRemoveInteger() {
@@ -93,12 +89,11 @@ public class SortedSetTest {
 		s1.insert(3);
 		s1.insert(8);
 		s1.insert(0);
-		s1.insert(1);	
+		s1.insert(1);
 		s1.insert(4);
 		assertTrue("3 geloescht", s1.remove(3));
 		assertFalse("3 nicht in der Menge", s1.remove(new Integer(3)));
 		
-		/*
 		s2.insert(0);
 		s2.insert(1);
 		s2.insert(4);
@@ -108,7 +103,7 @@ public class SortedSetTest {
 		assertTrue("0 aus s1 geloescht", s1.remove(new Integer(0)));
 		assertTrue("0 aus s2 geloescht", s2.remove(new Integer("0")));
 		assertTrue("[1, 4, 8]", s1.equal(s2));
-		*/
+
 	}
 
 	
@@ -205,8 +200,6 @@ public class SortedSetTest {
 		s1.printElement(5);
 		assertEquals("index out of bounds",outContent.toString().trim());
 	}
-
-	
 
 	@Test
 	public void testPrintAll() {

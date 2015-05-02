@@ -131,8 +131,32 @@ public class SortedSet implements MyComparable, MyPrintable {
 	}
 
 	@Override
-	public boolean equal(Object set) {
-		// TODO Auto-generated method stub
+	public boolean equal(Object o) {
+		boolean isEqual = false;
+		
+		if (o instanceof SortedSet){
+			SortedSet s1 = (SortedSet)o;
+			if(this.set.length == s1.set.length){
+				
+				for(int i = 0; i < this.set.length; i++){
+					if(this.set[i] == s1.set[i]){
+						isEqual = true;
+					}
+					else {
+						isEqual = false;
+					}
+				}
+				if(isEqual){
+					return true;
+				}
+				
+			}
+			else {
+				out("Not same size, not equal");
+				return false;
+			}
+			
+		}
 		return false;
 	}
 
