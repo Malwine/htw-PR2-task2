@@ -88,13 +88,34 @@ public class MyOwnSortedSetTest {
 		print(s2.set);
 		
 	}
+	
+	public static void testPrintElement() {
+		SortedSet s2 = new SortedSet();
+		out(s2.insert(1));
+		print(s2.set);
+		out(s2.insert(3));
+		print(s2.set);
+		out(s2.insert(2));
+		print(s2.set);
+		out(s2.insert(5));
+		print(s2.set);
+		out(s2.insert(7));
+		print(s2.set);
+		
+		out(s2.remove(2));
+		print(s2.set);
+		
+		out("Element an Stelle 2:");
+		s2.printElement(2);
+		
+	}
 
 	public static void main(String[] args) {
 		//testInsert();
 		
-		testRemove();
+		//testRemove();
 		
-		
+		testPrintElement();
 	}
 
 }

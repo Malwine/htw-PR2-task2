@@ -14,7 +14,7 @@ public class SortedSet implements MyComparable, MyPrintable {
 		set = new Integer[0];
 	}
 	
-	//helper! take out later!
+	//helper! take out later with all debug messages!
 	void out(Object line) {
 	    System.out.println(line);
 	}
@@ -100,8 +100,7 @@ public class SortedSet implements MyComparable, MyPrintable {
 
 	@Override
 	public void printElement(int index) {
-		// TODO Auto-generated method stub
-		
+		System.out.println(set[index]);
 	}
 
 	@Override
