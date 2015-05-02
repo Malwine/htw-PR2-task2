@@ -178,30 +178,34 @@ public class SortedSetTest {
 		assertEquals("not a number or not in the set",outContent.toString().trim());
 	}
 
-
-
-
-/*
 	@Test
-	public void testPrintElementInt() {
+	public void testPrintElementInt1() {
 		SortedSet s1 = new SortedSet();
 		s1.insert(3);
 		s1.insert(8);
 		s1.insert(0);
 		s1.insert(1);	
 		s1.insert(4);
-
-		// siehe oben
 		
-/*		// Test 1
+		// Test 1
 		s1.printElement(2);
-		assertEquals("3",outContent.toString().trim());*/
-/*		
+		assertEquals("3",outContent.toString().trim());
+	}
+	
+	@Test
+	public void testPrintElementInt2() {
+		SortedSet s1 = new SortedSet();
+		s1.insert(3);
+		s1.insert(8);
+		s1.insert(0);
+		s1.insert(1);	
+		s1.insert(4);
+		
 		// Test 2
 		s1.printElement(5);
 		assertEquals("index out of bounds",outContent.toString().trim());
 	}
-*/
+
 	
 
 	@Test

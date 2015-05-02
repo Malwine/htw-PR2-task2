@@ -111,7 +111,12 @@ public class SortedSet implements MyComparable, MyPrintable {
 
 	@Override
 	public void printElement(int index) {
-		System.out.println(set[index]);
+		if(index < set.length && index > 0){
+			System.out.println(set[index]);
+		}
+		else{
+			System.out.println("index out of bounds");
+		}
 	}
 
 	@Override
