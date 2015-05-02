@@ -2,6 +2,7 @@ package ss2015_aufgabe2;
 
 import java.util.Arrays;
 
+
 /**
  * SortedSet is a class for a sorted array without any doubled integers.
  * @author Malwine
@@ -57,7 +58,6 @@ public class SortedSet implements MyComparable, MyPrintable {
 	public boolean remove(int num) {
 		
 		if( set.length == 0 ){				    //if array is empty
-			out("array is empty");				//message
 			return false;
 		}
 		else {
@@ -71,12 +71,10 @@ public class SortedSet implements MyComparable, MyPrintable {
 						 tempSet[k-1] = set[k];
 					 }
 					 set = tempSet;                  				 //set set-array to temp-array
-					 out("number was deleted");
 					 return true;
 				 }
 			}	
 		}
-		out("num not in array");
 		return false;
 	}
 	
@@ -86,8 +84,28 @@ public class SortedSet implements MyComparable, MyPrintable {
 	}
 
 	@Override
-	public void printElement(Object element) {
-		// TODO Auto-generated method stub
+	public void printElement(Object o) {
+		boolean containsElement = false;
+		
+		if (o instanceof Integer){
+			Integer element = (Integer)o;
+			
+			for(int i = 0; i< set.length; i++){
+				if(set[i]== (int)element){
+					containsElement = true;
+				}
+			}
+			if(containsElement){
+				System.out.print(element);
+			}
+			else {
+				System.out.println("not a number or not in the set");
+			}
+			
+		}
+		else {
+			System.out.println("not a number or not in the set");
+		}
 		
 	}
 

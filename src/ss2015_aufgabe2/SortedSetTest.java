@@ -135,9 +135,9 @@ public class SortedSetTest {
 	}
 */
 
-/*
+
 	@Test
-	public void testPrintElementObject() {
+	public void testPrintElementObject1() {
 		SortedSet s1 = new SortedSet();
 		s1.insert(3);
 		s1.insert(8);
@@ -145,27 +145,41 @@ public class SortedSetTest {
 		s1.insert(1);	
 		s1.insert(4);
 
-		// immer nur ein Test moeglich, da nach einer Ausgabe
-		// immer der Outputstream geloescht werden muesste
-		// jeweils eine Testmethode notwendig - too lasy here
-		// Dach-Apfel-Slash und Dach-Apfel-Backslash zum 
-		// Ein- und Ausschalten der Blockkommentare benutzen
-		
-/*		// Test 1 
+		// Test 1 
 		s1.printElement(Integer.valueOf("3"));
-		assertEquals("3",outContent.toString().trim());*/
+		assertEquals("3",outContent.toString().trim());
+	}
 
-/*		// Test 2
+	@Test
+	public void testPrintElementObject2() {
+		SortedSet s1 = new SortedSet();
+		s1.insert(3);
+		s1.insert(8);
+		s1.insert(0);
+		s1.insert(1);	
+		s1.insert(4);
+		
+		// Test 2
 		s1.printElement(new Integer(3));
-		assertEquals("3",outContent.toString().trim());*/
+		assertEquals("3",outContent.toString().trim());
+	}
 
-/*
+	@Test
+	public void testPrintElementObject3() {
+		SortedSet s1 = new SortedSet();
+		s1.insert(3);
+		s1.insert(8);
+		s1.insert(0);
+		s1.insert(1);	
+		s1.insert(4);
+		
 		// Test 3
 		s1.printElement(new Integer(5));
 		assertEquals("not a number or not in the set",outContent.toString().trim());
-		
 	}
-*/
+
+
+
 
 /*
 	@Test
