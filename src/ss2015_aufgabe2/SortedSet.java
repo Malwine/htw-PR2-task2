@@ -11,17 +11,27 @@ import java.util.Arrays;
 public class SortedSet implements MyComparable, MyPrintable {
 	Integer[] set;
 	
+	/**
+	 * Constructor
+	 */
 	public SortedSet() {
 		set = new Integer[0];
 	}
 	
-	//helper! take out later with all debug messages!
+	/**
+	 * Sorthand method for printing debug messages and console output
+	 * @param line
+	 */
 	void out(Object line) {
 	    System.out.println(line);
 	}
 
+	/**
+	 * Insert a number in the set.
+	 * @param num
+	 * @return true if number input was successful
+	 */
 	public boolean insert(int num) {
-		
 		boolean shouldAdd = false;
 		
 		if( set.length == 0 ){				    //if array is empty
@@ -54,14 +64,17 @@ public class SortedSet implements MyComparable, MyPrintable {
 		return false;
 	}
 
-
+	/**
+	 * Removes number from set.
+	 * @param num
+	 * @return true if removing number was successful
+	 */
 	public boolean remove(int num) {
-		
-		if( set.length == 0 ){				    //if array is empty
+		if( set.length == 0 ){				    //if array is empty return false
 			return false;
 		}
 		else {
-			for (int i = 0; i < set.length; i++) { //go through array 
+			for (int i = 0; i < set.length; i++) { 					 //go through array 
 				 if (set[i] == num) {			   					 //if number at index equals num
 					 Integer[] tempSet = new Integer[set.length -1]; //create temp array
 					 for (int j = 0; j < i; j++) {					 //fill temp array with numbers before num
@@ -71,7 +84,7 @@ public class SortedSet implements MyComparable, MyPrintable {
 						 tempSet[k-1] = set[k];
 					 }
 					 set = tempSet;                  				 //set set-array to temp-array
-					 return true;
+					 return true;									 //return success status
 				 }
 			}	
 		}
@@ -83,6 +96,10 @@ public class SortedSet implements MyComparable, MyPrintable {
 		return false;
 	}
 
+	/**
+	 * Prints element if element exsists in the set,
+	 * otherwise prints string "not a number or not in the set".
+	 */
 	@Override
 	public void printElement(Object o) {
 		boolean containsElement = false;
@@ -109,6 +126,9 @@ public class SortedSet implements MyComparable, MyPrintable {
 		
 	}
 
+	/**
+	 * Prints element at index if index exists in array.
+	 */
 	@Override
 	public void printElement(int index) {
 		if(index < set.length && index > 0){
@@ -119,6 +139,10 @@ public class SortedSet implements MyComparable, MyPrintable {
 		}
 	}
 
+	/**
+	 * Prints the whole array in a certain way.
+	 * e.g. [ 1, 3, 4 ]
+	 */
 	@Override
 	public void printAll() {
 		System.out.print(set.length);
@@ -130,6 +154,11 @@ public class SortedSet implements MyComparable, MyPrintable {
 		System.out.print(" ]");
 	}
 
+	/**
+	 * Tests if sets are equal.
+	 * @param o 
+	 * @return true if sets are equal
+	 */
 	@Override
 	public boolean equal(Object o) {
 		boolean isEqual = false;
@@ -149,17 +178,12 @@ public class SortedSet implements MyComparable, MyPrintable {
 				if(isEqual){
 					return true;
 				}
-				
 			}
 			else {
 				out("Not same size, not equal");
 				return false;
 			}
-			
 		}
 		return false;
 	}
-
-	
-	
 }
