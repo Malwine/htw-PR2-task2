@@ -15,7 +15,6 @@ public class SortedSetTest {
 	    System.out.println(line);
 	}
 	
-	/*
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 
@@ -30,7 +29,6 @@ public class SortedSetTest {
 	    System.setOut(null);
 	    System.setErr(null);
 	}
-	*/
 
 	@Test
 	public void testFirst() {
@@ -191,7 +189,7 @@ public class SortedSetTest {
 	}
 */
 	
-/*	
+
 	@Test
 	public void testPrintAll() {
 		SortedSet s1 = new SortedSet();
@@ -204,7 +202,7 @@ public class SortedSetTest {
 		s1.printAll();
 		assertEquals("5 : [ 0, 1, 3, 4, 8 ]",outContent.toString().trim());
 	}
-*/
+
 }
 
 

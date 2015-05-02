@@ -26,14 +26,12 @@ public class SortedSet implements MyComparable, MyPrintable {
 		if( set.length == 0 ){				    //if array is empty
 			set = new Integer[1];  				//create array with length 1
 			set[0] = num;						//fill in number at first array spot
-			out("Array was null, num inserted");//message
 			return true;
 		}
 		else {
 			for(int i = 0; i< set.length; i++ ){ //if array is not empty - go through array
 				shouldAdd = false;
 				if(set[i] == num){				 //if number at index is equal to num - exit
-					out("number is double");     //message
 					return false;				 //return status false = contains num already
 					
 				}
@@ -42,7 +40,6 @@ public class SortedSet implements MyComparable, MyPrintable {
 				}
 			}
 			if(shouldAdd == true) {				//if shouldAdd is true add num and sort
-				out("added num at the end");    				 //message
 				Integer[] tempSet = new Integer[set.length + 1]; //new temprary array
 				for(int k = 0; k < tempSet.length -1; k++){      //fill temporary array with original array
 					tempSet[k] = set[k];
@@ -50,11 +47,9 @@ public class SortedSet implements MyComparable, MyPrintable {
 				tempSet[tempSet.length-1] = num;				 //fill num in last field of array
 				set = tempSet;									 //set set-array to temporary array
 				Arrays.sort(set);								 //sort the array
-				out("sorted");									 //message
 				return true;									 //return status true = was inserted
 			}
 		}
-		
 		return false;
 	}
 
@@ -79,9 +74,7 @@ public class SortedSet implements MyComparable, MyPrintable {
 					 out("number was deleted");
 					 return true;
 				 }
-			}
-			
-			
+			}	
 		}
 		out("num not in array");
 		return false;
@@ -105,8 +98,13 @@ public class SortedSet implements MyComparable, MyPrintable {
 
 	@Override
 	public void printAll() {
-		// TODO Auto-generated method stub
-		
+		System.out.print(set.length);
+		System.out.print(" : [ ");
+		for(int i = 0; i < set.length - 1; i++){
+			System.out.print(set[i] + ", ");
+		}
+		System.out.print(set[set.length-1]);
+		System.out.print(" ]");
 	}
 
 	@Override

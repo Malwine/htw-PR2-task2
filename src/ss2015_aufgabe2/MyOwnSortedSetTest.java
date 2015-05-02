@@ -6,6 +6,21 @@ public class MyOwnSortedSetTest {
 	    System.out.println(line);
 	}
 	
+	static SortedSet standardSet() {
+		SortedSet s2 = new SortedSet();
+		out(s2.insert(1));
+		print(s2.set);
+		out(s2.insert(3));
+		print(s2.set);
+		out(s2.insert(2));
+		print(s2.set);
+		out(s2.insert(5));
+		print(s2.set);
+		out(s2.insert(7));
+		print(s2.set);
+		return s2;
+	}
+	
 	public static void testInsert(){
 		SortedSet s1 = new SortedSet();
 		
@@ -68,19 +83,7 @@ public class MyOwnSortedSetTest {
 	}
 	
 	public static void testRemove() {
-		SortedSet s2 = new SortedSet();
-		s2.remove(2);
-		out(s2.insert(1));
-		print(s2.set);
-		out(s2.insert(3));
-		print(s2.set);
-		out(s2.insert(2));
-		print(s2.set);
-		out(s2.insert(5));
-		print(s2.set);
-		
-		out(s2.insert(7));
-		print(s2.set);
+		SortedSet s2 = standardSet();
 		
 		out(s2.remove(2));
 		print(s2.set);
@@ -90,17 +93,7 @@ public class MyOwnSortedSetTest {
 	}
 	
 	public static void testPrintElement() {
-		SortedSet s2 = new SortedSet();
-		out(s2.insert(1));
-		print(s2.set);
-		out(s2.insert(3));
-		print(s2.set);
-		out(s2.insert(2));
-		print(s2.set);
-		out(s2.insert(5));
-		print(s2.set);
-		out(s2.insert(7));
-		print(s2.set);
+		SortedSet s2 = standardSet();
 		
 		out(s2.remove(2));
 		print(s2.set);
@@ -109,13 +102,26 @@ public class MyOwnSortedSetTest {
 		s2.printElement(2);
 		
 	}
+	
+	public static void testPrintAll() {
+		
+		SortedSet s2 = standardSet();
+		
+		out(s2.remove(2));
+		print(s2.set);
+		
+		out("Print all num in set:");
+		s2.printAll();
+		
+	}
 
 	public static void main(String[] args) {
 		//testInsert();
 		
 		//testRemove();
 		
-		testPrintElement();
+		//testPrintElement();
+		testPrintAll();
 	}
 
 }
