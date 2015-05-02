@@ -106,8 +106,6 @@ public class SortedSetTest {
 
 	}
 
-	
-/*
 	@Test
 	public void testInsertSortedSet() {
 		SortedSet s1 = new SortedSet();
@@ -128,8 +126,6 @@ public class SortedSetTest {
 		s2.insert(8);
 		assertTrue("[0, 1, 2, 3, 4, 8]", s1.equal(s2));
 	}
-*/
-
 
 	@Test
 	public void testPrintElementObject1() {

@@ -44,7 +44,6 @@ public class SortedSet implements MyComparable, MyPrintable {
 				shouldAdd = false;
 				if(set[i] == num){				 //if number at index is equal to num - exit
 					return false;				 //return status false = contains num already
-					
 				}
 				else { 		 					// if array has ints then set shouldAdd to true
 					shouldAdd = true;			// set only boolean because otherwise loop ends here (hacky)
@@ -91,13 +90,34 @@ public class SortedSet implements MyComparable, MyPrintable {
 		return false;
 	}
 	
+	/**
+	 * Merges array in current array by using the insert-method.
+	 * @param s
+	 * @return
+	 */
 	public boolean insert(SortedSet s) {
-		// TODO 
-		return false;
+		
+		SortedSet temp = new SortedSet();
+		boolean noDoubles = true;
+		
+		for(int i = 0; i< set.length; i++){
+			temp.insert(set[i]);
+		}
+		for(int j = 0; j < s.set.length; j++){
+			noDoubles = temp.insert(s.set[j]);
+		}
+		this.set = temp.set;
+		
+		if(noDoubles){
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/**
-	 * Prints element if element exsists in the set,
+	 * Prints element if element exists in the set,
 	 * otherwise prints string "not a number or not in the set".
 	 */
 	@Override

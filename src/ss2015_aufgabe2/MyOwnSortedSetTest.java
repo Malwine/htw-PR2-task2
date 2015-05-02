@@ -89,7 +89,6 @@ public class MyOwnSortedSetTest {
 		print(s2.set);
 		out(s2.remove(7));
 		print(s2.set);
-		
 	}
 	
 	public static void testPrintElement() {
@@ -100,7 +99,6 @@ public class MyOwnSortedSetTest {
 		
 		out("Element an Stelle 2:");
 		s2.printElement(2);
-		
 	}
 	
 	public static void testPrintAll() {
@@ -112,16 +110,42 @@ public class MyOwnSortedSetTest {
 		
 		out("Print all num in set:");
 		s2.printAll();
+	}
+	public static void testInsertSet() {
+		SortedSet s1 = new SortedSet();
+		SortedSet s2 = new SortedSet();
+		s1.insert(3);
+		s1.insert(8);
+		s1.insert(0);
+		s1.insert(1);	
+		s1.insert(4);
 		
+		s2.insert(0);
+		s2.insert(1);
+		s2.insert(2);
+		s2.insert(3);
+		
+		
+		out("Original arrays:");
+		s1.printAll();
+		System.out.println();
+		
+		s2.printAll();
+		System.out.println();
+		
+		out("Merged array");
+		s1.insert(s2);
+		s1.printAll();
 	}
 
 	public static void main(String[] args) {
 		//testInsert();
-		
 		//testRemove();
-		
 		//testPrintElement();
-		testPrintAll();
+		//testPrintAll();
+		
+		testInsertSet();
+		
 	}
 
 }
